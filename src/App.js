@@ -51,7 +51,7 @@ const NavLink = styled(Link)({
 });
 
 const routes = [
-  { path: '/', Component: Home },
+  { path: '/', name: '', Component: Home },
   { path: '/about', name: 'about', Component: About },
   { path: '/work', name: 'work', Component: Work },
   { path: '/contact', name: 'contact', Component: Contact },
