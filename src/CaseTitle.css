@@ -3,17 +3,32 @@
     flex-direction: column;
     margin-top: 15px;
     text-align: left;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     width: 100%;
 }
 .title {
 	font-size: 20px;   
+    color: #070A6D;
 }
 
 .subtitle {
 	font-size: 18px;
     letter-spacing: 1px;
     line-height: 30px;
-    color: #838383;
+    color: #070A6D;
+}
+
+@media (max-width: 767px) {
+.title {
+    font-size: 18px;   
+    color: #070A6D;
+}
+
+.subtitle {
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: initial;
+    color: #070A6D;
+}
 }

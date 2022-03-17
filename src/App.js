@@ -1,10 +1,15 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom'
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { styled } from '@material-ui/core/styles';
 import About from './About.js';
+import Work from './Work.js';
+import Contact from './Contact.js';
 import Home from './Home.js';
 import AppBar from '@material-ui/core/AppBar';
-import { HashLink as Link } from 'react-router-hash-link';
+import { NavHashLink as Link } from 'react-router-hash-link';
 import './App.css';
+import FlockLogo from './img/flock_logo.png';
 
 import {
   BrowserRouter as Router,
@@ -19,7 +24,7 @@ const ClearBar = styled(AppBar)({
   boxShadow: 'none',
   color: 'black',
   height: 48,
-  padding: '80px 9%',
+  padding: '80px 10%',
   maxWidth: '100%',
   margin: '0',
   display: 'flex',
@@ -28,36 +33,69 @@ const ClearBar = styled(AppBar)({
 });
 
 const NavLink = styled(Link)({
-  color: '#000',
   fontSize: '16px',
-  fontFamily: 'Lato, sans-serif',
-  fontWeight: '300',
+  fontFamily: 'Poppins, sans-serif',
+  fontWeight: '700',
+  color: '#070A6D',
   letterSpacing: "1px",
   textDecoration: 'none',
   '&:hover': {
-       color: "#820263",
-    }
+       opacity: 0.6
+  },
+  '&:active': {
+    color: '#EF8B7C'
+  },
+  '&:focus': {
+    color: '#EF8B7C'
+  }
 });
+
+const routes = [
+  { path: '/', Component: Home },
+  { path: '/about', name: 'about', Component: About },
+  { path: '/work', name: 'work', Component: Work },
+  { path: '/contact', name: 'contact', Component: Contact },
+]
 
 export default function App() {
   return (
     <Router>
       <ClearBar position="fixed">
-        <NavLink smooth to="/#hello">NK</NavLink>
-          <div className="nav">
-            <NavLink to="/about">about</NavLink>
-            <NavLink smooth to="/#work">work</NavLink>
-            <NavLink smooth to="/#contact">contact</NavLink>
+        <NavLink to="/"><img src={FlockLogo} height={'30px'} /></NavLink>
+        <div className="nav">
+            {routes.map(route => (
+              <NavLink
+                key={route.path}
+                as={NavLink}
+                to={route.path}
+                activeClassName="active"
+                activeStyle={{ color: '#EF8B7C' }}
+                exact
+              >
+                {route.name}
+              </NavLink>
+            ))}
           </div>
       </ClearBar>
-      <Switch>
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route path="/">
-           <Home />
-        </Route>
-      </Switch>
+      <div className="div">
+          {routes.map(({ path, Component }) => (
+            <Route key={path} exact path={path}>
+              {({ match }) => (
+                <CSSTransition
+                  in={match != null}
+                  timeout={3000}
+                  classNames="page"
+                  unmountOnExit
+                >
+                  <div className="page">
+                    <Component />
+                  </div>
+                </CSSTransition>
+              )}
+            </Route>
+          ))}
+        </div>
+      
     </Router>
   );
 }

@@ -1,5 +1,33 @@
 .nav {
 	display: grid;
 	grid-auto-flow: column;
-    column-gap: 15px;
+    column-gap: 30px;
+}
+
+.container {
+  position: relative;
+}
+
+.page {
+  position: absolute;
+  left: 15px;
+  right: 15px;
+}
+
+.page-enter {
+  opacity: 0;
+}
+
+.page-enter-active {
+  opacity: 1;
+  transition: opacity 800ms;
+}
+
+.page-exit {
+  opacity: 1;
+}
+
+.page-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
 }

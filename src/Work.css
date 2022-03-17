@@ -1,0 +1,13 @@
+#work {
+	margin-bottom: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    grid-row-gap: 40px;
+}
+
+@media (max-width: 767px) {
+	#work {
+	    grid-template-columns: 1fr;
+	}
+}
