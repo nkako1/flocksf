@@ -46,6 +46,7 @@ function Work() {
       <div id="work">
           {cases.map(it => (
             <Case
+              key={it.title}
               thumbnail={it.thumbnail}
               content={it.content}
               title={it.title}

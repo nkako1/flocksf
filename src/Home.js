@@ -12,7 +12,7 @@ function Home() {
       <div className="pageSubtitle">
         Flock is a small UI/UX design firm based in SF.
       </div>
-      <video autoPlay loop muted id='video'>
+      <video playsInline autoPlay loop muted id='video'>
         <source src={bg} type='video/mp4' />
       </video>
     </div>
