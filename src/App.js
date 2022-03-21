@@ -12,7 +12,7 @@ import './App.css';
 import FlockLogo from './img/flock_logo.png';
 
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
@@ -59,7 +59,7 @@ const routes = [
 
 export default function App() {
   return (
-    <Router>
+    <Router basename="/">
       <ClearBar position="fixed">
         <NavLink to="/"><img src={FlockLogo} height={'30px'} /></NavLink>
         <div className="nav">
