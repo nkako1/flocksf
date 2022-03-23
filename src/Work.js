@@ -25,16 +25,16 @@ import wowd from './img/wowd.png';
 import './Work.css';
 
 const cases = [
-  { thumbnail: thumbnail_wowd, content: wowd, title: "Wowd", subtitle: "An app to connect creators and fans", closeColor: "white" },
-  { thumbnail: thumbnail_xip, content: xip, title: "Xip", subtitle: "A platform for personalized advice", closeColor: "white" },
-  { thumbnail: thumbnail_figment, content: figment, title: "Figment", subtitle: "A platform for Web3 developers", closeColor: "black" },
-  { thumbnail: thumbnail_betteromics, content: betteromics, title: "Betteromics", subtitle: "Software for the life sciences", closeColor: "black" },
-  { thumbnail: thumbnail_downdog, content: downdog, title: "Down Dog", subtitle: "An app for practicing yoga", closeColor: "white" },
-  { thumbnail: thumbnail_kapwing, content: kapwing, title: "Kapwing", subtitle: "An online content creation platform", closeColor: "black" },
-  { thumbnail: thumbnail_mindful_mamas, content: mindful_mamas, title: "Mindful Mamas", subtitle: "A meditation app for new moms", closeColor: "black" },
-  { thumbnail: thumbnail_retain, content: retain, title: "Retain", subtitle: "A tool to understand the time cost of customers", closeColor: "black" },
-  { thumbnail: thumbnail_reduct, content: reduct, title: "Reduct", subtitle: "A new text / audio artifact", closeColor: "black" },
-  { thumbnail: thumbnail_eiq_mobility, content: eiq_mobility, title: "eIQ Mobility", subtitle: "A company helping electrify commercial fleets", closeColor: "white" }
+  { thumbnail: thumbnail_wowd, alt:"wowd_case_study_thumbnail", content: wowd, title: "Wowd", subtitle: "An app to connect creators and fans", closeColor: "white" },
+  { thumbnail: thumbnail_xip, alt:"xip_case_study_thumbnail", content: xip, title: "Xip", subtitle: "A platform for personalized advice", closeColor: "white" },
+  { thumbnail: thumbnail_figment, alt:"figment_case_study_thumbnail", content: figment, title: "Figment", subtitle: "A platform for Web3 developers", closeColor: "black" },
+  { thumbnail: thumbnail_betteromics, alt:"betteromnics_case_study_thumbnail", content: betteromics, title: "Betteromics", subtitle: "Software for the life sciences", closeColor: "black" },
+  { thumbnail: thumbnail_downdog, alt:"down dog_case_study_thumbnail", content: downdog, title: "Down Dog", subtitle: "An app for practicing yoga", closeColor: "white" },
+  { thumbnail: thumbnail_kapwing, alt:"kapwing_case_study_thumbnail", content: kapwing, title: "Kapwing", subtitle: "An online content creation platform", closeColor: "black" },
+  { thumbnail: thumbnail_mindful_mamas, alt:"mindful mamas_case_study_thumbnail", content: mindful_mamas, title: "Mindful Mamas", subtitle: "A meditation app for new moms", closeColor: "black" },
+  { thumbnail: thumbnail_retain, alt:"retain_case_study_thumbnail", content: retain, title: "Retain", subtitle: "A tool to understand the time cost of customers", closeColor: "black" },
+  { thumbnail: thumbnail_reduct, alt:"reduct_case_study_thumbnail", content: reduct, title: "Reduct", subtitle: "A new text / audio artifact", closeColor: "black" },
+  { thumbnail: thumbnail_eiq_mobility, alt:"eiq mobility_case_study_thumbnail", content: eiq_mobility, title: "eIQ Mobility", subtitle: "A company helping electrify commercial fleets", closeColor: "white" }
 ]
 
 function Work() {
@@ -52,6 +52,7 @@ function Work() {
               title={it.title}
               subtitle={it.subtitle}
               closeColor={it.closeColor}
+              alt={it.alt}
             />
           ))}
       </div>

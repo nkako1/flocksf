@@ -61,7 +61,7 @@ export default function App() {
   return (
     <Router basename="/">
       <ClearBar position="fixed">
-        <NavLink to="/"><img src={FlockLogo} height={'30px'} /></NavLink>
+        <NavLink to="/"><img src={FlockLogo} height={'30px'} alt={"Flock Studio Sf Logo"} /></NavLink>
         <div className="nav">
             {routes.map(route => (
               <NavLink

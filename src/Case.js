@@ -45,7 +45,7 @@ function CaseDialog(props) {
   );
 }
 
-export default function Case({thumbnail, content, title, subtitle, closeColor}) {
+export default function Case({thumbnail, content, title, subtitle, closeColor, alt}) {
 
   const [open, setOpen] = React.useState(false);
 
@@ -60,7 +60,7 @@ export default function Case({thumbnail, content, title, subtitle, closeColor}) 
   return (
     <>
       <CaseThumbnail variant="outlined" color="primary" onClick={handleClickOpen}>
-        <img src={thumbnail} width="100%" />
+        <img src={thumbnail} width="100%" alt={alt} />
         <CaseTitle title={title} subtitle={subtitle} />
       </CaseThumbnail>
       <CaseDialog open={open} onClose={handleClose} dialogContent={content} closeColor={closeColor} />
