@@ -20,13 +20,18 @@ import thumbnail_figment from './img/thumbnail_figment.png';
 import figment from './img/figment.png';
 import thumbnail_xip from './img/thumbnail_xip.png';
 import xip from './img/xip.png';
-import thumbnail_wowd from './img/thumbnail_wowd.png';
-import wowd from './img/wowd.png';
+import thumbnail_talkback from './img/thumbnail_talkback.png';
+import talkback from './img/talkback.png';
+import thumbnail_her from './img/thumbnail_her.png';
+import her from './img/her.png';
+import thumbnail_webacy from './img/thumbnail_webacy.png';
+import webacy from './img/webacy.png';
 import './Work.css';
 
 const cases = [
-  { thumbnail: thumbnail_wowd, alt:"wowd_case_study_thumbnail", content: wowd, title: "Wowd", subtitle: "An app to connect creators and fans", closeColor: "white" },
-  { thumbnail: thumbnail_xip, alt:"xip_case_study_thumbnail", content: xip, title: "Xip", subtitle: "A platform for personalized advice", closeColor: "white" },
+  { thumbnail: thumbnail_webacy, alt:"webacy_case_study_thumbnail", content: webacy, title: "Webacy", subtitle: "A platform for protecting your crypto", closeColor: "white" },
+  { thumbnail: thumbnail_her, alt:"her_case_study_thumbnail", content: her, title: "Her", subtitle: "A FLINTA dating and community app", closeColor: "black" },
+  { thumbnail: thumbnail_talkback, alt:"talkback_case_study_thumbnail", content: talkback, title: "Talkback", subtitle: "An app to connect creators and fans", closeColor: "white" },  { thumbnail: thumbnail_xip, alt:"xip_case_study_thumbnail", content: xip, title: "Xip", subtitle: "A platform for personalized advice", closeColor: "white" },
   { thumbnail: thumbnail_figment, alt:"figment_case_study_thumbnail", content: figment, title: "Figment", subtitle: "A platform for Web3 developers", closeColor: "black" },
   { thumbnail: thumbnail_betteromics, alt:"betteromnics_case_study_thumbnail", content: betteromics, title: "Betteromics", subtitle: "Software for the life sciences", closeColor: "black" },
   { thumbnail: thumbnail_downdog, alt:"down dog_case_study_thumbnail", content: downdog, title: "Down Dog", subtitle: "An app for practicing yoga", closeColor: "white" },
