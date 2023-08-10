@@ -35,7 +35,7 @@ a {
   font-size: 80px;
   font-weight: 700;
   color: #070A6D;
-  margin: 10% 0 2% 0;
+  margin: 8% 0 2% 0;
   line-height: initial;
   display: flex;
   flex-direction: column;
@@ -45,8 +45,9 @@ a {
 .pageSubtitle {
   font-family: 'Poppins', sans-serif;
   font-size: 40px;
+  margin: 4% 0 2% 0;
   max-width: 580px;
-  font-weight: 300;
+  font-weight: 600;
   color: #070A6D;
   line-height: initial;
 }
@@ -58,7 +59,7 @@ a {
   }
   .pageSubtitle {
       max-width: 100%;
-      font-size: 20px;
+      font-size: 30px;
   }
 
   .wrapper {

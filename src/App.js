@@ -5,6 +5,7 @@ import { styled } from '@material-ui/core/styles';
 import About from './About.js';
 import Work from './Work.js';
 import Contact from './Contact.js';
+import Pricing from './Pricing.js';
 import Home from './Home.js';
 import AppBar from '@material-ui/core/AppBar';
 import { NavHashLink as Link } from 'react-router-hash-link';
@@ -54,6 +55,7 @@ const routes = [
   { path: '/', name: '', Component: Home },
   { path: '/about', name: 'about', Component: About },
   { path: '/work', name: 'work', Component: Work },
+  { path: '/pricing', name: 'pricing', Component: Pricing },
   { path: '/contact', name: 'contact', Component: Contact },
 ]
 

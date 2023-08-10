@@ -1,0 +1,22 @@
+#exposition {
+	max-width: 600px;
+}
+
+#project-types {
+	display:grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
+}
+.project-type {
+	padding: 6%;
+	background: white;
+	border-radius: 10px;
+}
+ul { padding-left: 1.2em; }
+
+@media (max-width: 767px) {
+  #project-types {
+		grid-template-rows: repeat(3, 1fr);
+		grid-template-columns: unset;
+	}
+}
